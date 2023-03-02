@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro page</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/183/183552.png" type="image/x-icon">
+    <style>
+        
+@import url('http://fonts.cdnfonts.com/css/tomihesta');
+@import url('http://fonts.cdnfonts.com/css/mike-sans-free');
+
+
+
+
+.LoginBody{
+    
+    background-color:#c3e6fc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+body{
+    background-color:#c3e6fc;
+
+}
+.LoginBodyLeft{
+    
+    
+    background-repeat: no-repeat;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.im{
+    height: 600px;
+    width: 800px;
+    margin: 40px 0px 40px 30px;
+
+}
+img{
+    border-radius: 20px;
+}
+
+
+/**************************Right Part ***********************************/
+.LoginBodyRight{
+    background: color #c3e6fc;
+    margin-left: 60px;
+    margin-top: 175px;
+}
+.LoginBodyRighth1{
+    margin:20px 30px 30px 10px;
+    font-size: 45px;
+    font-family: 'Tomihesta', sans-serif;
+    
+}
+
+
+
+
+.ORtext{
+    color:rgb(44, 44, 44);
+    font-size: 20px;
+ text-align: center;
+    font-size: 25px;
+    font-family: 'Mike Sans Free', sans-serif;
+}
+
+.registration{
+    text-align: center;
+}
+.registration button {
+    
+    color: aqua;
+    width: 180px;
+    height: 45px;
+    background-color: rgb(11, 135, 129);
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .bn:hover{
+    background-color: rgb(87, 190, 203);
+  }
+
+  #kcpd{
+    margin-left: 36%;
+  }
+
+
+    </style>
+
+<body>
+
+                <div class="LoginBody">
+                    <div class="LoginBodyLeft">
+                        
+                       
+
+                         <img src="{% static 'intro.png' %}" alt="" class="im">
+                        
+                    </div>
+                    <div class="LoginBodyRight">
+                        <h2 class="LoginBodyRighth1">Welcome To Contact Book</h2>
+
+
+
+                        <div class="ORtext"> Create Your Own Contact Book. </div>
+                        
+
+
+                        <br>
+                        <div>
+
+                            <a href="/home/" id="kcpd" class="btn btn-info  btn-primary btn-lg">Let's Get Started</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Contact</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Yusei Magic' rel='stylesheet'>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/183/183552.png" type="image/x-icon">
+    <style>
+        body{
+            background-color: #0f1628;
+        }
+        .container{
+            border-radius: 70px;
+            margin-top: 40px;
+            margin-left: 120px;
+            margin-right: 140px;
+            margin-bottom: 40px;
+            background-color:#538195 ;
+            padding-bottom: 30px;
+            
+        }
+        .table{
+            width: 700px;
+           border-radius: 20px;
+           margin-left: 30px;
+           display: flex;
+           padding-left: 50px;
+           border-color:#538195 ;
+           
+        }
+        .f{
+            display: flex;
+        }
+        .im{
+            margin-top: 20px;
+            display: inline;
+            height: 450px;
+            width: 470px;
+            border-radius: 50%;
+         
+        }
+        .my-3{
+            margin-left: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
+            font-family: 'Yusei Magic';font-size: 50px;
+            margin-right: 40px;
+            font-weight: 600;
+        }
+        .btn btn-primary{
+            width: 120px;
+            font-size: 25px;
+            background-color: aqua;
+        }
+        .btn{
+            width: 160px;
+            font-size: 20px;
+            border-radius: 7px;
+            font-family: 'Yusei Magic';font-size: 22px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h3 class="my-3">Update Data <a href="/home" class="float-end btn btn-sm btn-success mt-2">Contact List</a></h3>
+        {% for msg in messages %}
+        <p class="text-light">{{msg}}</p>
+        {% endfor %}
+        <form method="post" action="">
+            {% csrf_token %}
+            <table class="table table-bordered">
+                {{form.as_table}}
+                <tr>
+                    <td colspan="2"><input type="submit" class="btn btn-primary" /></td>
+                </tr>
+            </table>
+
+        </form>
+    </main>
+</body>
+</html>
